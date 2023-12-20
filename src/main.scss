@@ -1,0 +1,15 @@
+@import './components/header/header.scss';
+@import './base/typographies/typographies.scss';
+@import './abstracts/colors/colors.scss';
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 10vw;
+}

@@ -1,0 +1,43 @@
+/* Thème sombre */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
+    header .me img {
+        border: #fff 2px solid;
+    }
+
+    header .nav .nav-contact:hover {
+        border: #fff 2px solid;
+    }
+
+    header .nav .nav-links {
+        background-color: #333;
+    }
+}
+    
+/* Thème clair (par défaut) */
+.light-theme {
+    background-color: #fff;
+    color: #333;
+
+    a {
+        color: black;
+    }
+
+    header .me img {
+        border: black 2px solid;
+    }
+
+    header .nav .nav-contact:hover {
+        border: black 2px solid;
+    }
+
+    header .nav .nav-links {
+        background-color: #fff;
+    }
+}

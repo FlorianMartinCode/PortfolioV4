@@ -1,0 +1,198 @@
+@import '../../abstracts/colors/colors.scss';
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .me {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+  
+        h1 {
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+    }
+  
+    .nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    
+        .nav-toggle {
+            display: none;
+        }
+  
+        .nav-links {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+  
+            a {
+                font-size: 20px;
+                font-weight: 500;
+                padding: 5px;
+                margin: 0 30px;
+            }
+  
+            .nav-contact {
+                background-color: $primary-color;
+                border: $primary-color 2px solid;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                background-image: linear-gradient(to bottom, transparent 0%, transparent 100%);
+                padding: 10px 30px;
+  
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+  
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24.5px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 25px;
+            margin-left: 25px;
+  
+            input {
+                display: none;
+            }
+  
+            input:checked + .toggle {
+                background-color: #209cee;
+
+                &::before {
+                    transform: translateX(25px);
+                }
+            }
+  
+            .toggle {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000;
+                transition: .4s;
+                border-radius: 34px;
+  
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 25px;
+                    height: 23px;
+                    left: -2px;
+                    top: 0;
+                    background-color: #fff;
+                    transition: 0.4s;
+                    border-radius: 50px;
+                    border: #000 1px solid;
+                }
+  
+                i {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                    transition: 0.4s;
+                    color: #000;
+                }
+  
+                i.fa-sun,
+                i.fa-moon {
+                    width: 20px;
+                    text-align: center;
+                }
+  
+                i.fa-sun {
+                    left: 1px;
+                    opacity: 1;
+                }
+  
+                i.fa-moon {
+                    left: calc(100% - 20px - 2px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+  
+    @media screen and (max-width: 1024px) {
+        .nav {
+            display: flex;
+            flex-direction: row-reverse;
+            .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            right: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+    
+            a {
+                padding: 10px;
+                margin: 0;
+                width: 100%;
+                text-align: right;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+    
+                .nav-contact {
+                    padding: 10px 15px;
+                }
+        
+                .theme-switch {
+                    margin-left: 0;
+                }
+            }
+    
+            .nav-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 25px;
+            margin-top: 7px;
+            }
+    
+            &.open {
+                .nav-links {
+                    display: flex;
+                    right: 10vw;
+
+                    a {
+                        padding: 5px 0;
+                    }
+
+                    .nav-contact {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .theme-switch {
+                    margin: 15px 0 10px 0;
+                }
+            }
+        }
+    }
+}
+  

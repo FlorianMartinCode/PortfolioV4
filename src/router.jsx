@@ -5,6 +5,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './pages/home/home';
 import './main.scss';
+import { ThemeProvider } from './theme/theme'
 
 const HeaderFooter = () => (
     <>
@@ -16,13 +17,15 @@ const HeaderFooter = () => (
 
 function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HeaderFooter />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HeaderFooter />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
