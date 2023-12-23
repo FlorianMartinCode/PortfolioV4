@@ -21,10 +21,10 @@ function Header() {
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">
           <NavLink to="/" onClick={() => setMenuOpen(false)}>
-            Home
+            Accueil
           </NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-            About
+            À propos
           </NavLink>
           <NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>
             Portfolio
