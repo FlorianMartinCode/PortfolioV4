@@ -1,0 +1,44 @@
+{
+  "skills": [
+    {
+      "name": "Html",
+      "icon": "https://i.goopics.net/uhmk7g.png",
+      "link": "https://developer.mozilla.org/fr/docs/Web/HTML"
+    },
+    {
+      "name": "Css",
+      "icon": "https://i.goopics.net/drn6e3.png",
+      "link": "https://developer.mozilla.org/fr/docs/Web/CSS/Reference"
+    },
+    {
+      "name": "Scss",
+      "icon": "https://i.goopics.net/qg848e.png",
+      "link": "https://sass-lang.com/documentation/"
+    },
+    {
+      "name": "Tailwind",
+      "icon": "https://i.goopics.net/ns289q.png",
+      "link": "https://v2.tailwindcss.com/docs"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "https://i.goopics.net/onlp95.png",
+      "link": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
+    },
+    {
+      "name": "React",
+      "icon": "https://i.goopics.net/vcru98.png",
+      "link": "https://react.dev/"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "https://i.goopics.net/hb99y5.png",
+      "link": "https://www.typescriptlang.org/fr/docs/"
+    }
+  ],
+  "education": {
+    "year": "2023",
+    "institution": "OpenClassrooms",
+    "degree": "Intégrateur web - RNCP niveau 5"
+  }
+}

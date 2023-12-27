@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../theme/theme';
 import '../../theme/theme.scss';
 import Me from '../../assets/me.png';
+import { Link } from 'react-scroll';
 
 function Header() {
   const { darkTheme, toggleTheme } = useTheme();
@@ -20,15 +21,15 @@ function Header() {
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          <Link to="home" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
             Accueil
-          </NavLink>
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link to="about" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
             À propos
-          </NavLink>
-          <NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link to="portfolio" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
             Portfolio
-          </NavLink>
+          </Link>
           <NavLink className="nav-contact" to="/contact" onClick={() => setMenuOpen(false)}>
             Contact
           </NavLink>

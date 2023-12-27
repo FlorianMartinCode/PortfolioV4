@@ -7,16 +7,20 @@
         color: white;
     }
 
-    header .me img {
-        border: white 2px solid;
-    }
-
-    header .nav .nav-contact:hover {
-        border: white 2px solid;
-    }
-
-    header .nav .nav-links {
+    header {
         background-color: #333;
+
+        .me img {
+            border: white 2px solid;
+        }
+
+        .nav .nav-links {
+            background-color: #333;
+
+            .nav-contact:hover {
+                border: white 2px solid;
+            }
+        }
     }
 
     main .home .home-right h2 {
@@ -33,16 +37,20 @@
         color: black;
     }
 
-    header .me img {
-        border: black 2px solid;
-    }
-
-    header .nav .nav-contact:hover {
-        border: black 2px solid;
-    }
-
-    header .nav .nav-links {
+    header {
         background-color: white;
+
+        .me img {
+            border: black 2px solid;
+        }
+
+        .nav .nav-links {
+            background-color: white;
+
+            .nav-contact:hover {
+                border: black 2px solid;
+            }
+        }
     }
 
     main .home .home-right h2 {

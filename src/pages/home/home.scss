@@ -1,6 +1,5 @@
 main {
-    position: relative;
-  
+    padding-top: 100px;
     .social-icons {
         position: fixed;
         top: 50vh;
@@ -51,14 +50,13 @@ main {
             }
         }
     }
-    
+
     .home {
         padding: 70px 10vw 230px 10vw;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        position: relative;
         background-position: center;
 
         .home-left {
@@ -79,14 +77,16 @@ main {
 
         .home-right {
             width: 50%;
+            width: auto;
             text-align: end;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
 
             h2 {
+                width: auto;
                 font-size: 50px;
-                margin: 15px 0;
+                margin: 15px 0 15px auto;
                 cursor: pointer;
             }
 
@@ -96,10 +96,102 @@ main {
             }
         }
     }
+
+    .about-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 200px 10vw;
+
+        .about-card {
+            background-color: $transparant-color;
+            width: 40%;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+            }
+
+            .about-skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 60px;
+                margin: 30px;
+                justify-content: center;
+
+                .about-skill {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .about-education {
+                margin: 30px;
+
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .about-presentation {
+        padding: 0 10vw 0 10vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .about-me {
+            width: 50%;
+            span {
+                font-size: 20px;
+                color: $primary-color;
+            }
+            h2 {
+                margin: 5px 0 30px 0;
+            }
+            p {
+                margin: 5px 0;
+            }
+        }
+
+        img {
+            width: 40%;
+            height: 400px;
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) { 
     main {
+        .social-icons {
+            margin-left: 10px;
+
+        }
+
         .home {
             padding: 50px 3vw 50px 3vw;
             flex-direction: column;
@@ -126,6 +218,36 @@ main {
                 h2 {
                     font-size: 30px;
                 }
+            }
+        }
+
+        .about-cards {
+            padding: 50px 0 100px 0;
+            flex-direction: column;
+            gap: 30px;
+
+            .about-card {
+                width: 100%;
+                padding: 20px 30px;
+
+                .about-skills {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .about-presentation {
+            flex-direction: column;
+            padding: 0;
+
+            .about-me {
+                width: 100%;
+                padding: 0 0 50px 60px;
+            }
+
+             img {
+                width: 300px;
+                margin: 0 auto;
             }
         }
     }

@@ -7,6 +7,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 10vw ;
+    position: fixed;
+    z-index: 1;
   
     .me {
         display: flex;
@@ -44,6 +46,7 @@ header {
                 font-weight: 500;
                 padding: 5px;
                 margin: 0 30px;
+                cursor: pointer;
             }
   
             .nav-contact {
@@ -185,12 +188,16 @@ header {
                     }
                 }
 
+                .nav-contact {
+                    border-radius: 0;
+                }
+
                 .theme-switch {
                     margin: 15px 0 10px 0;
 
                     .toggle {
                         &::before {
-                            height: 22.5px;
+                            height: 23px;
                         }
                     }
                 }

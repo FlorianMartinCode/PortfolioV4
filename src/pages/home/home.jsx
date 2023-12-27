@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import aboutData from '../../data/about.json'
 
 const images = {
   creative: 'https://i.goopics.net/ui9pim.jpg',
@@ -21,18 +23,21 @@ function Home() {
     };
   }, [backgroundImage]);
 
+  const edu = aboutData.education;
+
   return (
     <main>
       <div className="social-icons">
-        <a href="https://github.com/FlorianMartinCode" target="_blank" rel="noopener noreferrer">
+        <Link to="https://github.com/FlorianMartinCode" target="_blank" rel="noopener noreferrer">
           <img src="https://i.goopics.net/49ioue.png" alt="GitHub" />
-        </a>
-        <a href="https://www.linkedin.com/in/florian-martin-477748266/" target="_blank" rel="noopener noreferrer">
+        </Link>
+
+        <Link to="https://www.linkedin.com/in/florian-martin-477748266/" target="_blank" rel="noopener noreferrer">
           <img src="https://i.goopics.net/q5woa7.png" alt="LinkedIn" />
-        </a>
+        </Link>
       </div>
 
-      <section>
+      <section id='home' >
         <div className="scrolling-bar">
           <p className="scrolling-text">Accueil</p>
           <p className="scrolling-text">Accueil</p>
@@ -88,6 +93,61 @@ function Home() {
             Esprit collaboratif
           </h2>
         </div>
+        </div>
+      </section>
+      <section id='about' >
+        <div className="scrolling-bar">
+          <p className="scrolling-text">À propos</p>
+          <p className="scrolling-text">À propos</p>
+          <p className="scrolling-text">À propos</p>
+          <p className="scrolling-text">À propos</p>
+          <p className="scrolling-text">À propos</p>
+          <p className="scrolling-text">À propos</p>
+        </div>
+
+        <div className='about-cards' >
+          <div className='about-card' >
+            <img src="https://i.goopics.net/9uju1t.png" alt="Logo de compétences" />
+            <h2>Compétences</h2>
+            <div className='about-skills' >
+              {aboutData.skills.map((skill, index) => (
+                <Link to={skill.link} key={index} className='about-skill' target="_blank" rel="noopener noreferrer">
+                  <img src={skill.icon} alt={skill.name} />
+                  <span>{skill.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className='about-card' >
+            <img src="https://i.goopics.net/yy2q9s.png" alt="Logo de formation et diplôme" />
+            <h2>Formation & Diplôme</h2>
+            <div className='about-education'>
+              <h3>{edu.year} <span>{edu.institution}</span></h3>
+              <span>{edu.degree}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className='about-presentation' >
+          <div className='about-me' >
+            <span>Développeur web Front-End</span>
+            <h2>Florian MARTIN</h2>
+            <p>Créatif, j'apprécie la conception d'interfaces web élégantes et modernes pour offrir une expérience utilisateur de qualité.</p>
+            <p>Optimiste, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences.</p>
+            <p>Dévoué, j'accorde une grande importance à l'accessibilité web, veillant à ce que chaque utilisateur puisse profiter pleinement de nos sites</p>
+            <p>Esprit collaboratif, j'apprécie travailler en équipe pour créer des solutions innovantes et atteindre des standards de qualité élevés.</p>
+          </div>
+          <img src="https://i.goopics.net/vdwpsm.png" alt="Photographie de Florian" />
+        </div>
+      </section>
+      <section id='portfolio' >
+      <div className="scrolling-bar">
+          <p className="scrolling-text">Portfolio</p>
+          <p className="scrolling-text">Portfolio</p>
+          <p className="scrolling-text">Portfolio</p>
+          <p className="scrolling-text">Portfolio</p>
+          <p className="scrolling-text">Portfolio</p>
+          <p className="scrolling-text">Portfolio</p>
         </div>
       </section>
     </main>
