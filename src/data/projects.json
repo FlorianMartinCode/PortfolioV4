@@ -1,14 +1,14 @@
 {
     "projects": [
         {
-            "id": 1,
-            "title": "Booki",
-            "cover": "https://i.goopics.net/6qvm52.png",
-            "alt": "Image de couverture pour Booki",
-            "urlSite": "https://florianmartincode.github.io/Booki/#",
-            "urlGitHub": "https://github.com/FlorianMartinCode/Booki",
-            "description": "L’entreprise Booki souhaitait développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface du site et le responsive avec du code HTML et CSS.",
-            "compétences": [
+          "id": 1,
+          "title": "Booki",
+          "cover": "https://i.goopics.net/6qvm52.png",
+          "alt": "Image de couverture pour Booki",
+          "urlSite": "https://florianmartincode.github.io/Booki/#",
+          "urlGitHub": "https://github.com/FlorianMartinCode/Booki",
+          "description": "L’entreprise Booki souhaitait développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface du site et le responsive avec du code HTML et CSS.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -22,14 +22,14 @@
             ]
         },
         {
-            "id": 2,
-            "title": "OhMyFood",
-            "cover": "https://i.goopics.net/8u3f9c.png",
-            "alt": "Image de couverture pour OhMyFood",
-            "urlSite": "https://florianmartincode.github.io/OhMyFood/",
-            "urlGitHub": "https://github.com/FlorianMartinCode/OhMyFood",
-            "description": "L'entreprise oh my food souhaitait un site mobile first qui répertorie les menus de restaurants gastronomiques. Il fallait le développer pour mobile, tablette et desktop en s’appuyant rigoureusement sur les informations déterminées dans le brief créatif et inclure des animations soignées !",
-            "compétences": [
+          "id": 2,
+          "title": "OhMyFood",
+          "cover": "https://i.goopics.net/8u3f9c.png",
+          "alt": "Image de couverture pour OhMyFood",
+          "urlSite": "https://florianmartincode.github.io/OhMyFood/",
+          "urlGitHub": "https://github.com/FlorianMartinCode/OhMyFood",
+          "description": "L'entreprise oh my food souhaitait un site mobile first qui répertorie les menus de restaurants gastronomiques. Il fallait le développer pour mobile, tablette et desktop en s’appuyant rigoureusement sur les informations déterminées dans le brief créatif et inclure des animations soignées !",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -48,14 +48,14 @@
             ]
         },
         {
-            "id": 3,
-            "title": "PrintIt",
-            "cover": "https://i.goopics.net/nfn8xt.png",
-            "alt": "Image de couverture pour PrintIt",
-            "urlSite": "https://florianmartincode.github.io/PrintIt/",
-            "urlGitHub": "https://github.com/FlorianMartinCode/PrintIt",
-            "description": "Conception d'un carrousel en JavaScript pour afficher des images et du texte avec des indicateurs liés à chaque image.",
-            "compétences": [
+          "id": 3,
+          "title": "PrintIt",
+          "cover": "https://i.goopics.net/nfn8xt.png",
+          "alt": "Image de couverture pour PrintIt",
+          "urlSite": "https://florianmartincode.github.io/PrintIt/",
+          "urlGitHub": "https://github.com/FlorianMartinCode/PrintIt",
+          "description": "Conception d'un carrousel en JavaScript pour afficher des images et du texte avec des indicateurs liés à chaque image.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -74,13 +74,13 @@
             ]
         },
         {
-            "id": 4,
-            "title": "Portfolio Sophie Bluel",
-            "cover": "https://i.goopics.net/m20jhy.png",
-            "alt": "Image de couverture pour Portfolio Sophie Bluel",
-            "urlGitHub": "https://github.com/FlorianMartinCode/PortfolioArchitecteSophieBluel",
-            "description": "Conception du site portfolio d’une architecte d’intérieur. Création de la page de présentation des travaux de l'architecte, la page de connexion de l'administrateur du site, la modale permettant d'uploader de nouveaux médias, ainsi que tout le lien avec le backend (appel API, gestion authentification, token, erreur).",
-            "compétences": [
+          "id": 4,
+          "title": "Portfolio Sophie Bluel",
+          "cover": "https://i.goopics.net/m20jhy.png",
+          "alt": "Image de couverture pour Portfolio Sophie Bluel",
+          "urlGitHub": "https://github.com/FlorianMartinCode/PortfolioArchitecteSophieBluel",
+          "description": "Conception du site portfolio d’une architecte d’intérieur. Création de la page de présentation des travaux de l'architecte, la page de connexion de l'administrateur du site, la modale permettant d'uploader de nouveaux médias, ainsi que tout le lien avec le backend (appel API, gestion authentification, token, erreur).",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -104,14 +104,14 @@
             ]
         },
         {
-            "id": 5,
-            "title": "Kasa",
-            "cover": "https://i.goopics.net/9kife3.png",
-            "alt": "Image de couverture pour Kasa",
-            "urlSite": "https://florianmartincode.github.io/Kasa/",
-            "urlGitHub": "https://github.com/FlorianMartinCode/Kasa",
-            "description": "Nous avons donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end.",
-            "compétences": [
+          "id": 5,
+          "title": "Kasa",
+          "cover": "https://i.goopics.net/9kife3.png",
+          "alt": "Image de couverture pour Kasa",
+          "urlSite": "https://florianmartincode.github.io/Kasa/",
+          "urlGitHub": "https://github.com/FlorianMartinCode/Kasa",
+          "description": "Nous avons donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -140,14 +140,14 @@
             ]
         },
         {
-            "id": 6,
-            "title": "Nina Carducci",
-            "cover": "https://i.goopics.net/7u31k5.jpg",
-            "alt": "Image de couverture pour Nina Carducci",
-            "urlSite": "https://florianmartincode.github.io/NinaCarducci/",
-            "urlGitHub": "https://github.com/FlorianMartinCode/NinaCarducci",
-            "description": "La photographe Nina Carducci a demandée de faire une optimisation tant sur les performances que sur le SEO. Mettre en place le référencement local. Ajouter les metas pour les réseaux sociaux. Faire les modifications liées à l’accessibilité du site. Produire un rapport d’optimisation présentant toutes mes actions et leur impact.",
-            "compétences": [
+          "id": 6,
+          "title": "Nina Carducci",
+          "cover": "https://i.goopics.net/7u31k5.jpg",
+          "alt": "Image de couverture pour Nina Carducci",
+          "urlSite": "https://florianmartincode.github.io/NinaCarducci/",
+          "urlGitHub": "https://github.com/FlorianMartinCode/NinaCarducci",
+          "description": "La photographe Nina Carducci a demandée de faire une optimisation tant sur les performances que sur le SEO. Mettre en place le référencement local. Ajouter les metas pour les réseaux sociaux. Faire les modifications liées à l’accessibilité du site. Produire un rapport d’optimisation présentant toutes mes actions et leur impact.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -159,15 +159,15 @@
                 "logo": "https://i.goopics.net/1ylrgn.png"
                 }
             ]
-            },
-            {
-            "id": 7,
-            "title": "724 Events",
-            "cover": "https://i.goopics.net/183sx6.jpg",
-            "alt": "Image de couverture pour 724 Events",
-            "urlGitHub": "https://github.com/FlorianMartinCode/724-Events",
-            "description": "L’agence 724 Events souhaitait publier la nouvelle version de son site vitrine. Il s’agit d’un site one-page. Le design avait été validé, et un premier développeur freelance avait commencé l’intégration. Ce freelance a dû abandonner le projet pour raisons personnelles. Le site était fonctionnel, mais quelques bugs entravaient le bon usage par les visiteurs. 724events a donc fait appel à moi pour finaliser le travail.",
-            "compétences": [
+        },
+        {
+          "id": 7,
+          "title": "724 Events",
+          "cover": "https://i.goopics.net/183sx6.jpg",
+          "alt": "Image de couverture pour 724 Events",
+          "urlGitHub": "https://github.com/FlorianMartinCode/724-Events",
+          "description": "L’agence 724 Events souhaitait publier la nouvelle version de son site vitrine. Il s’agit d’un site one-page. Le design avait été validé, et un premier développeur freelance avait commencé l’intégration. Ce freelance a dû abandonner le projet pour raisons personnelles. Le site était fonctionnel, mais quelques bugs entravaient le bon usage par les visiteurs. 724events a donc fait appel à moi pour finaliser le travail.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
@@ -186,13 +186,13 @@
             ]
         },
         {
-            "id": 8,
-            "title": "ArgentBank",
-            "cover": "https://i.goopics.net/g361r9.png",
-            "alt": "Image de couverture pour Argent Bank",
-            "urlGitHub": "https://github.com/FlorianMartinCode/ArgentBank-website",
-            "description": "Argent Bank m'a confié la mission d'implémenter le front-end du site avec React, en mettant à profit Redux pour une gestion globale efficace.",
-            "compétences": [
+          "id": 8,
+          "title": "ArgentBank",
+          "cover": "https://i.goopics.net/g361r9.png",
+          "alt": "Image de couverture pour Argent Bank",
+          "urlGitHub": "https://github.com/FlorianMartinCode/ArgentBank-website",
+          "description": "Argent Bank m'a confié la mission d'implémenter le front-end du site avec React, en mettant à profit Redux pour une gestion globale efficace.",
+          "compétences": [
                 {
                 "id": 1,
                 "name": "HTML",
