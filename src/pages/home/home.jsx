@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import aboutData from '../../data/about.json'
+import aboutData from '../../data/about.json';
+import Slider from '../../components/main/slider/slider';
+import projectsData from '../../data/projects.json';
 
 const images = {
   creative: 'https://i.goopics.net/ui9pim.jpg',
@@ -141,7 +143,7 @@ function Home() {
         </div>
       </section>
       <section id='portfolio' >
-      <div className="scrolling-bar">
+        <div className="scrolling-bar">
           <p className="scrolling-text">Portfolio</p>
           <p className="scrolling-text">Portfolio</p>
           <p className="scrolling-text">Portfolio</p>
@@ -149,6 +151,9 @@ function Home() {
           <p className="scrolling-text">Portfolio</p>
           <p className="scrolling-text">Portfolio</p>
         </div>
+
+        <Slider projects={projectsData.projects} />
+
       </section>
     </main>
   );

@@ -27,7 +27,7 @@ function Header() {
           <Link to="about" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
             À propos
           </Link>
-          <Link to="portfolio" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
+          <Link to="portfolio" smooth={true} offset={-99} onClick={() => setMenuOpen(false)}>
             Portfolio
           </Link>
           <NavLink className="nav-contact" to="/contact" onClick={() => setMenuOpen(false)}>
