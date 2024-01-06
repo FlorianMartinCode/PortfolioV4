@@ -7,9 +7,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10vw ;
+    padding: 0 8vw ;
     position: fixed;
     z-index: 1;
+    box-sizing: border-box;
   
     .me {
         display: flex;
