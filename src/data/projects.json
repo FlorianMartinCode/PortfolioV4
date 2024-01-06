@@ -2,6 +2,7 @@
     "projects": [
         {
           "id": 1,
+          "category": "OpenClassrooms",
           "title": "Booki",
           "cover": "https://i.goopics.net/6qvm52.png",
           "alt": "Image de couverture pour Booki",
@@ -23,6 +24,7 @@
         },
         {
           "id": 2,
+          "category": "OpenClassrooms",
           "title": "OhMyFood",
           "cover": "https://i.goopics.net/8u3f9c.png",
           "alt": "Image de couverture pour OhMyFood",
@@ -49,6 +51,7 @@
         },
         {
           "id": 3,
+          "category": "OpenClassrooms",
           "title": "PrintIt",
           "cover": "https://i.goopics.net/nfn8xt.png",
           "alt": "Image de couverture pour PrintIt",
@@ -75,6 +78,7 @@
         },
         {
           "id": 4,
+          "category": "OpenClassrooms",
           "title": "Portfolio Sophie Bluel",
           "cover": "https://i.goopics.net/m20jhy.png",
           "alt": "Image de couverture pour Portfolio Sophie Bluel",
@@ -105,6 +109,7 @@
         },
         {
           "id": 5,
+          "category": "OpenClassrooms",
           "title": "Kasa",
           "cover": "https://i.goopics.net/9kife3.png",
           "alt": "Image de couverture pour Kasa",
@@ -141,6 +146,7 @@
         },
         {
           "id": 6,
+          "category": "OpenClassrooms",
           "title": "Nina Carducci",
           "cover": "https://i.goopics.net/7u31k5.jpg",
           "alt": "Image de couverture pour Nina Carducci",
@@ -162,6 +168,7 @@
         },
         {
           "id": 7,
+          "category": "OpenClassrooms",
           "title": "724 Events",
           "cover": "https://i.goopics.net/183sx6.jpg",
           "alt": "Image de couverture pour 724 Events",
@@ -187,6 +194,7 @@
         },
         {
           "id": 8,
+          "category": "OpenClassrooms",
           "title": "ArgentBank",
           "cover": "https://i.goopics.net/g361r9.png",
           "alt": "Image de couverture pour Argent Bank",

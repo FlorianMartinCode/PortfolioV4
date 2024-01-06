@@ -183,6 +183,13 @@ main {
             height: 400px;
         }
     }
+
+    .category-dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 1024px) { 

@@ -26,6 +26,14 @@
     main .home .home-right h2 {
         -webkit-text-stroke: 2px black;
     }
+
+    .modal .modal-content {
+        background-color: #333;
+    }
+
+    .close-button {
+        color: white;
+    }
 }
     
 /* Thème clair (par défaut) */
@@ -55,5 +63,13 @@
 
     main .home .home-right h2 {
         -webkit-text-stroke: 1px white;
+    }
+
+    .modal .modal-content {
+        background-color: white;
+
+        .close-button {
+            color: black;
+        }
     }
 }

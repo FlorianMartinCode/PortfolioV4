@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import aboutData from '../../data/about.json';
 import Slider from '../../components/main/slider/slider';
 import projectsData from '../../data/projects.json';
+import Card from '../../components/main/cards/card';
+import Modal from '../../components/main/modal/modal';
 
 const images = {
   creative: 'https://i.goopics.net/ui9pim.jpg',
@@ -26,6 +28,28 @@ function Home() {
   }, [backgroundImage]);
 
   const edu = aboutData.education;
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const [projects] = useState(projectsData.projects);
+
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+  const filteredProjects = selectedCategory === 'Tous'
+    ? projects
+    : projects.filter(project => project.category === selectedCategory);
+
+    const categories = ['Tous', 'OpenClassrooms', 'Personnel'];
 
   return (
     <main>
@@ -153,6 +177,36 @@ function Home() {
         </div>
 
         <Slider projects={projectsData.projects} />
+
+        <div className="category-dropdown">
+          <label htmlFor="category">Filtrer par catégorie:</label>
+          <select
+            id="category"
+            value={selectedCategory}
+            onChange={(e) => handleCategoryChange(e.target.value)}
+          >
+            {categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category === '' ? 'Tous' : category}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className='card-content'>
+          {filteredProjects && filteredProjects.slice().reverse().map((project) => (
+            <Card
+              key={project.id}
+              cover={project.cover}
+              alt={project.alt}
+              title={project.title}
+              onClick={() => openModal(project)}
+            />
+          ))}
+        </div>
+        {modalOpen && (
+          <Modal project={selectedProject} onClose={closeModal} />
+        )}
 
       </section>
     </main>
