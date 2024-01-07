@@ -53,6 +53,7 @@ function Home() {
 
   return (
     <main>
+
       <div className="social-icons">
         <Link to="https://github.com/FlorianMartinCode" target="_blank" rel="noopener noreferrer">
           <img src="https://i.goopics.net/49ioue.png" alt="GitHub" />

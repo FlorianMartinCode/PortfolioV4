@@ -1,5 +1,6 @@
 main {
     padding-top: 100px;
+
     .social-icons {
         position: fixed;
         top: 50vh;
@@ -37,7 +38,7 @@ main {
         .scrolling-text {
             display: inline-block;
             white-space: nowrap;
-            animation: scrollText 3s linear infinite;
+            animation: scrollText 5s linear infinite;
             padding-right: 25vw;
         }
       
