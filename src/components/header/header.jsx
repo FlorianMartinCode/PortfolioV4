@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../theme/theme';
 import '../../theme/theme.scss';
 import Me from '../../assets/me.png';
@@ -8,10 +8,13 @@ import { Link } from 'react-scroll';
 function Header() {
   const { darkTheme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const isContactPage = location.pathname === '/contact';
 
   return (
     <header>
@@ -21,18 +24,27 @@ function Header() {
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">
-          <Link to="home" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
-            Accueil
-          </Link>
-          <Link to="about" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
-            À propos
-          </Link>
-          <Link to="portfolio" smooth={true} offset={-99} onClick={() => setMenuOpen(false)}>
-            Portfolio
-          </Link>
-          <NavLink className="nav-contact" to="/contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </NavLink>
+          {!isContactPage && (
+            <Link to="home" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
+              Accueil
+            </Link>
+          )}
+          {!isContactPage && (
+            <Link to="about" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
+              À propos
+            </Link>
+          )}
+          {!isContactPage && (
+            <Link to="portfolio" smooth={true} offset={-99} onClick={() => setMenuOpen(false)}>
+              Portfolio
+            </Link>
+          )}
+          {!isContactPage && (
+            <NavLink className="nav-contact" to="/contact" >
+              Contact
+            </NavLink>
+          )}
+           
           <label className="theme-switch">
             <input
               name="checkbox"

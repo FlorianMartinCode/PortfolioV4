@@ -38,7 +38,7 @@ main {
             display: inline-block;
             white-space: nowrap;
             animation: scrollText 3s linear infinite;
-            padding-right: 15vw;
+            padding-right: 25vw;
         }
       
         @keyframes scrollText {
@@ -101,7 +101,7 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 100px 10vw 200px 10vw;
+        padding: 100px 10vw 220px 10vw;
 
         .about-card {
             background-color: $transparant-color;
