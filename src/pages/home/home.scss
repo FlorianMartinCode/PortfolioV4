@@ -256,6 +256,14 @@ main {
             .about-me {
                 width: 100%;
                 padding: 0 0 50px 60px;
+
+                span {
+                    font-size: 18px;
+
+                    img {
+                        margin-left: 5px;
+                    }
+                }
             }
 
              img {
