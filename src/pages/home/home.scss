@@ -1,6 +1,5 @@
 main {
     padding-top: 100px;
-
     .social-icons {
         position: fixed;
         top: 50vh;
@@ -102,7 +101,7 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 100px 10vw 220px 10vw;
+        padding: 100px 10vw 200px 10vw;
 
         .about-card {
             background-color: $transparant-color;

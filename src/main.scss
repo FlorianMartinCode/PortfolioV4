@@ -25,13 +25,13 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    animation: loader 5s;
+    animation: loader 2.5s;
 
     @keyframes loader {
         0% {
             opacity: 1;
         }
-        80% {
+        50% {
             opacity: 1;
         }
         100% {
@@ -94,7 +94,6 @@
 }
 .fondu-out {
     opacity: 0;
-    transition: opacity 2s ease-out;
 }
 
 @media screen and (max-width: 1024px) {

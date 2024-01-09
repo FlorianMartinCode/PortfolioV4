@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from '../../theme/theme';
 import '../../theme/theme.scss';
 import Me from '../../assets/me.png';
@@ -40,9 +40,9 @@ function Header() {
             </Link>
           )}
           {!isContactPage && (
-            <NavLink className="nav-contact" to="/contact" >
+            <a className="nav-contact" href="/contact" >
               Contact
-            </NavLink>
+            </a>
           )}
            
           <label className="theme-switch">
