@@ -15,8 +15,19 @@ const images = {
 
 function Home() {
 
+  const logos = [
+    {html:'https://i.goopics.net/orgwz9.png'},
+    {css:'https://i.goopics.net/1ylrgn.png'},
+    {sass:'https://i.goopics.net/3xjr57.png'},
+    {tailwind:'https://i.goopics.net/3lmyu5.png'},
+    {javascript:'https://i.goopics.net/qe7k8w.png'},
+    {typescript:'https://i.goopics.net/6su8fe.png'},
+    {react:'https://i.goopics.net/8wmxf4.png'},
+  ]
+
   const [backgroundImage, setBackgroundImage] = useState(images.creative);
   const [selectedTitle, setSelectedTitle] = useState('creative');
+  const [typedLogosIndex, setTypedLogosIndex] = useState(0);
 
   useEffect(() => {
     const homeElement = document.querySelector('.home');
@@ -26,6 +37,14 @@ function Home() {
       homeElement.style.backgroundImage = '';
     };
   }, [backgroundImage]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTypedLogosIndex((prevIndex) => (prevIndex + 1) % logos.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  },);
 
   const edu = aboutData.education;
 
@@ -157,7 +176,9 @@ function Home() {
 
         <div className='about-presentation' >
           <div className='about-me' >
-            <span>Développeur web Front-End</span>
+            <span>Développeur web Front-End
+              <img src={logos[typedLogosIndex]?.[Object.keys(logos[typedLogosIndex])[0]]} alt={Object.keys(logos[typedLogosIndex])[0]} />
+            </span>
             <h2>Florian MARTIN</h2>
             <p>Créatif, j'apprécie la conception d'interfaces web élégantes et modernes pour offrir une expérience utilisateur de qualité.</p>
             <p>Optimiste, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences.</p>

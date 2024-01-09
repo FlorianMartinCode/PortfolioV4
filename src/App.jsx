@@ -10,7 +10,7 @@ function App() {
       loader.classList.add('fondu-out');
     };
 
-    const delayInMilliseconds = 2500;
+    const delayInMilliseconds = 2450;
     setTimeout(adjustZIndex, delayInMilliseconds);
   }, []);
 
