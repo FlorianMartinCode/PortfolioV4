@@ -68,7 +68,7 @@
                     text-align: center;
 
                     img {
-                        min-width: 40px;
+                        max-width: 40px;
                         max-width: 40px;
                         height: auto;
                         margin: 0 5px;
@@ -112,7 +112,7 @@
             }
 
             .compétences img {
-                min-width: 30px;
+                max-width: 30px;
                 max-width: 30px;
             }
         }
