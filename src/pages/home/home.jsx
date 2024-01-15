@@ -9,7 +9,7 @@ import Modal from '../../components/main/modal/modal';
 const images = {
   creative: 'https://i.goopics.net/ui9pim.jpg',
   optimistic: 'https://i.goopics.net/acg1b6.jpg',
-  dedicated: 'https://i.goopics.net/hlr474.jpg',
+  dedicated: 'https://i.goopics.net/cwqaxa.png',
   collaborative: 'https://i.goopics.net/ra3gf2.png',
 };
 
