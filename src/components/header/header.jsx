@@ -16,6 +16,10 @@ function Header() {
 
   const isContactPage = location.pathname === '/contact';
 
+  const handleNavLinkClick = () => {
+    window.location.href = "/contact";
+  };
+
   return (
     <header>
       <div className="me">
@@ -40,7 +44,7 @@ function Header() {
             </Link>
           )}
           {!isContactPage && (
-            <NavLink className="nav-contact" to="/contact" >
+            <NavLink className="nav-contact" to="/contact" onClick={handleNavLinkClick} >
               Contact
             </NavLink>
           )}
