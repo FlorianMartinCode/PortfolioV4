@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-function Modal({ project, onClose }) {
+function Modal({ project, onClose, onPrevious, onNext }) {
   useEffect(() => {
     const handleEscapeKey = (e) => {
       if (e.key === 'Escape') {
@@ -50,6 +50,14 @@ function Modal({ project, onClose }) {
               Voir sur GitHub
             </a>
           )}
+        </div>
+        <div className="modal-navigation">
+          <button onClick={onPrevious} className="navigation-button">
+            &#8249; {/* Flèche vers la gauche */}
+          </button>
+          <button onClick={onNext} className="navigation-button">
+            &#8250; {/* Flèche vers la droite */}
+          </button>
         </div>
       </div>
     </div>

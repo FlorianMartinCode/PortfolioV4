@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Modal from '../modal/modal';
+import projectsData from '../../../data/projects.json';
 
 function Slider({ projects }) {
   const [currentIndex] = useState(0);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -14,6 +16,18 @@ function Slider({ projects }) {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  const handlePreviousProject = () => {
+    const newIndex = currentProjectIndex > 0 ? currentProjectIndex - 1 : projectsData.projects.length - 1;
+    setCurrentProjectIndex(newIndex);
+    setSelectedProject(projectsData.projects[newIndex]);
+ };
+ 
+ const handleNextProject = () => {
+    const newIndex = currentProjectIndex < projectsData.projects.length - 1 ? currentProjectIndex + 1 : 0;
+    setCurrentProjectIndex(newIndex);
+    setSelectedProject(projectsData.projects[newIndex]);
+ };
 
   return (
     <div className='slider'>
@@ -103,7 +117,12 @@ function Slider({ projects }) {
         </div>
       </div>
       {modalOpen && (
-        <Modal project={selectedProject} onClose={closeModal} />
+        <Modal 
+          project={selectedProject} 
+          onClose={closeModal} 
+          onPrevious={handlePreviousProject}
+          onNext={handleNextProject}
+        />
       )}
     </div>
   );

@@ -31,6 +31,14 @@
 
         .close-button {
             color: white;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .modal-navigation .navigation-button {
+            color: white;
         }
     }
 
@@ -79,6 +87,14 @@
 
         .close-button {
             color: black;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .modal-navigation .navigation-button {
+            color: #333;
         }
     }
 

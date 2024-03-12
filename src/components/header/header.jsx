@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from '../../theme/theme';
 import '../../theme/theme.scss';
 import Me from '../../assets/me.png';
@@ -10,15 +10,21 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme !== null) {
+      const parsedTheme = storedTheme === 'true';
+      if (parsedTheme !== darkTheme) {
+        toggleTheme(parsedTheme);
+      }
+    }
+  }, [toggleTheme, darkTheme]);
+
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const isContactPage = location.pathname === '/contact';
-
-  const handleNavLinkClick = () => {
-    window.location.href = "/contact";
-  };
 
   return (
     <header>
@@ -44,16 +50,20 @@ function Header() {
             </Link>
           )}
           {!isContactPage && (
-            <NavLink className="nav-contact" to="/contact" onClick={handleNavLinkClick} >
+            <a className="nav-contact" href="/contact">
               Contact
-            </NavLink>
+            </a>
           )}
-           
+
           <label className="theme-switch">
             <input
               name="checkbox"
               type="checkbox"
-              onChange={toggleTheme}
+              onChange={(e) => {
+                toggleTheme(e.target.checked);
+                // Enregistrer le thème sélectionné dans le stockage local
+                localStorage.setItem('theme', JSON.stringify(e.target.checked));
+              }}
               checked={darkTheme}
             />
             <span className="toggle">
@@ -70,3 +80,4 @@ function Header() {
 }
 
 export default Header;
+

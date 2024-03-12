@@ -39,6 +39,7 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Entrez votre nom"
+            autoComplete="name"
             required
           />
 
@@ -50,6 +51,7 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Entrez votre email"
+            autoComplete="email"
             required
           />
 

@@ -6,28 +6,33 @@ import projectsData from '../../data/projects.json';
 import Card from '../../components/main/cards/card';
 import Modal from '../../components/main/modal/modal';
 
+// Image page
+import GitHub from "../../assets/icons/github.png"
+import LinkedIn from "../../assets/icons/linkedin.png"
+
+//image home
+import Creative from "../../assets/topHome/creatif.png"
+import Optimisc from "../../assets/topHome/optimiste.jpg"
+import Dedicated from "../../assets/topHome/dévoué.png"
+import Collaborative from "../../assets/topHome/espritcollaboratif.png"
+
+// Image about
+import Skills from "../../assets/about/skills.png"
+import Form from "../../assets/about/forma.png"
+
+import Me from "../../assets/about/me.png"
+
 const images = {
-  creative: 'https://i.goopics.net/ui9pim.jpg',
-  optimistic: 'https://i.goopics.net/acg1b6.jpg',
-  dedicated: 'https://i.goopics.net/cwqaxa.png',
-  collaborative: 'https://i.goopics.net/ra3gf2.png',
+  creative: Creative,
+  optimistic: Optimisc,
+  dedicated: Dedicated,
+  collaborative: Collaborative,
 };
 
 function Home() {
 
-  const logos = [
-    {html:'https://i.goopics.net/orgwz9.png'},
-    {css:'https://i.goopics.net/1ylrgn.png'},
-    {sass:'https://i.goopics.net/3xjr57.png'},
-    {tailwind:'https://i.goopics.net/3lmyu5.png'},
-    {javascript:'https://i.goopics.net/qe7k8w.png'},
-    {typescript:'https://i.goopics.net/6su8fe.png'},
-    {react:'https://i.goopics.net/8wmxf4.png'},
-  ]
-
   const [backgroundImage, setBackgroundImage] = useState(images.creative);
   const [selectedTitle, setSelectedTitle] = useState('creative');
-  const [typedLogosIndex, setTypedLogosIndex] = useState(0);
 
   useEffect(() => {
     const homeElement = document.querySelector('.home');
@@ -38,17 +43,10 @@ function Home() {
     };
   }, [backgroundImage]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTypedLogosIndex((prevIndex) => (prevIndex + 1) % logos.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  },);
-
   const edu = aboutData.education;
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const openModal = (project) => {
@@ -58,6 +56,19 @@ function Home() {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  const handlePreviousProject = () => {
+    const newIndex = currentProjectIndex > 0 ? currentProjectIndex - 1 : projectsData.projects.length - 1;
+    setCurrentProjectIndex(newIndex);
+    setSelectedProject(projectsData.projects[newIndex]);
+ };
+ 
+ const handleNextProject = () => {
+    const newIndex = currentProjectIndex < projectsData.projects.length - 1 ? currentProjectIndex + 1 : 0;
+    setCurrentProjectIndex(newIndex);
+    setSelectedProject(projectsData.projects[newIndex]);
+ };
+
   const [projects] = useState(projectsData.projects);
 
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -75,11 +86,11 @@ function Home() {
 
       <div className="social-icons">
         <Link to="https://github.com/FlorianMartinCode" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.goopics.net/49ioue.png" alt="GitHub" />
+          <img src={GitHub} alt="GitHub" />
         </Link>
 
         <Link to="https://www.linkedin.com/in/florian-martin-477748266/" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.goopics.net/q5woa7.png" alt="LinkedIn" />
+          <img src={LinkedIn} alt="LinkedIn" />
         </Link>
       </div>
 
@@ -97,7 +108,7 @@ function Home() {
           <div className='home-left'>
             <h2>Salut, je m'appelle</h2>
             <h2 className='home-left-name' >Florian Martin</h2>
-            <h2>est je suis développeur</h2>
+            <h2>et je suis développeur</h2>
             <h2>Front-End</h2>
             <h2>à Paris et aux alentours 📍</h2>
           </div>
@@ -153,7 +164,7 @@ function Home() {
 
         <div className='about-cards' >
           <div className='about-card' >
-            <img src="https://i.goopics.net/9uju1t.png" alt="Logo de compétences" />
+            <img src={Skills} alt="Logo de compétences" />
             <h2>Compétences</h2>
             <div className='about-skills' >
               {aboutData.skills.map((skill, index) => (
@@ -165,7 +176,7 @@ function Home() {
             </div>
           </div>
           <div className='about-card' >
-            <img src="https://i.goopics.net/yy2q9s.png" alt="Logo de formation et diplôme" />
+            <img src={Form} alt="Logo de formation et diplôme" />
             <h2>Formation & Diplôme</h2>
             <div className='about-education'>
               <h3>{edu.year} <span>{edu.institution}</span></h3>
@@ -176,16 +187,14 @@ function Home() {
 
         <div className='about-presentation' >
           <div className='about-me' >
-            <span>Développeur web Front-End
-              <img src={logos[typedLogosIndex]?.[Object.keys(logos[typedLogosIndex])[0]]} alt={Object.keys(logos[typedLogosIndex])[0]} />
-            </span>
+            <span>Développeur web Front-End</span>
             <h2>Florian MARTIN</h2>
             <p>Créatif, j'apprécie la conception d'interfaces web élégantes et modernes pour offrir une expérience utilisateur de qualité.</p>
             <p>Optimiste, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences.</p>
             <p>Dévoué, j'accorde une grande importance à l'accessibilité web, veillant à ce que chaque utilisateur puisse profiter pleinement de nos sites</p>
             <p>Esprit collaboratif, j'apprécie travailler en équipe pour créer des solutions innovantes et atteindre des standards de qualité élevés.</p>
           </div>
-          <img src="https://i.goopics.net/vdwpsm.png" alt="Photographie de Florian" />
+          <img src={Me} alt="Photographie de Florian" />
         </div>
       </section>
       <section id='portfolio' >
@@ -198,7 +207,7 @@ function Home() {
           <p className="scrolling-text">Portfolio</p>
         </div>
 
-        <Slider projects={projectsData.projects} />
+        <Slider projects={projectsData.projects}/>
 
         <div className="category-dropdown">
           <label htmlFor="category">Filtrer par catégorie:</label>
@@ -227,7 +236,12 @@ function Home() {
           ))}
         </div>
         {modalOpen && (
-          <Modal project={selectedProject} onClose={closeModal} />
+          <Modal 
+            project={selectedProject} 
+            onClose={closeModal}
+            onPrevious={handlePreviousProject}
+            onNext={handleNextProject}
+          />
         )}
 
       </section>

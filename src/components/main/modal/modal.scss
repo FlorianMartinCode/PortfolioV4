@@ -29,10 +29,6 @@
             border: none;
             cursor: pointer;
             font-size: 20px;
-        
-            &:hover {
-                color: red;
-            }
         }
   
         .modal-centre {
@@ -92,6 +88,23 @@
                 }
             }
         }
+
+        .modal-navigation {
+            position: absolute;
+            top: 90%;
+            transform: translateY(-50%);
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .navigation-button {
+                background: none;
+                border: none;
+                font-size: 50px;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -118,7 +131,23 @@
         }
         
     }
-    .modal .modal-content .modal-links {
-        flex-direction: column;
+    .modal .modal-content {
+        .modal-links {
+            flex-direction: column;
+        }
+
+        .modal-navigation {
+            position: relative;
+            top: 100%;
+            transform: translateY(0%);
+            justify-content: space-around;
+    
+            .navigation-button {
+                background: none;
+                border: none;
+                font-size: 50px;
+                cursor: pointer;
+            }
+        }
     }
 }
