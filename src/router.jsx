@@ -6,7 +6,6 @@ import Footer from './components/footer/footer';
 import Home from './pages/home/home';
 import './main.scss';
 import { ThemeProvider } from './theme/theme'
-import Contact from './pages/contact/contact'
 
 const HeaderFooter = () => (
     <>
@@ -23,7 +22,6 @@ function Router() {
         <Routes>
           <Route path="/" element={<HeaderFooter />}>
             <Route index element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

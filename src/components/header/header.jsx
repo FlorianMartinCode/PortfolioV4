@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import { useTheme } from '../../theme/theme';
 import '../../theme/theme.scss';
 import Me from '../../assets/me.png';
@@ -8,7 +8,6 @@ import { Link } from 'react-scroll';
 function Header() {
   const { darkTheme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -24,8 +23,6 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
 
-  const isContactPage = location.pathname === '/contact';
-
   return (
     <header>
       <div className="me">
@@ -34,26 +31,18 @@ function Header() {
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">
-          {!isContactPage && (
             <Link to="home" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
               Accueil
             </Link>
-          )}
-          {!isContactPage && (
             <Link to="about" smooth={true} offset={-100} onClick={() => setMenuOpen(false)}>
               À propos
             </Link>
-          )}
-          {!isContactPage && (
             <Link to="portfolio" smooth={true} offset={-99} onClick={() => setMenuOpen(false)}>
               Portfolio
             </Link>
-          )}
-          {!isContactPage && (
-            <a className="nav-contact" href="/contact">
+            <a className="nav-contact" href="mailto:florian.martin700@gmail.com">
               Contact
             </a>
-          )}
 
           <label className="theme-switch">
             <input
