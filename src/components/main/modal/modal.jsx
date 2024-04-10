@@ -51,14 +51,6 @@ function Modal({ project, onClose, onPrevious, onNext }) {
             </a>
           )}
         </div>
-        <div className="modal-navigation">
-          <button onClick={onPrevious} className="navigation-button">
-            &#8249; {/* Flèche vers la gauche */}
-          </button>
-          <button onClick={onNext} className="navigation-button">
-            &#8250; {/* Flèche vers la droite */}
-          </button>
-        </div>
       </div>
     </div>
   );
