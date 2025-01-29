@@ -20,7 +20,7 @@
         max-height: 80%;
         overflow-y: auto;
         border-radius: 5px;
-  
+
         .close-button {
             position: absolute;
             top: 5px;
@@ -30,20 +30,20 @@
             cursor: pointer;
             font-size: 20px;
         }
-  
+
         .modal-centre {
             display: flex;
             flex-direction: row;
             align-items: center;
-        
+
             img {
                 max-width: 65%;
                 height: auto;
                 padding-right: 5px;
                 object-fit: cover;
-              }
-            
-              .desc-compétences {
+            }
+
+            .desc-compétences {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
@@ -55,16 +55,15 @@
                     font-size: 16px;
                     margin-bottom: 2px;
                 }
-            
+
                 p {
                     font-size: 1rem;
                 }
-            
+
                 .compétences {
                     text-align: center;
 
                     img {
-                        max-width: 40px;
                         max-width: 40px;
                         height: auto;
                         margin: 0 5px;
@@ -73,16 +72,61 @@
                 }
             }
         }
-    
+
         .modal-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-        
+
+            button {
+                display: flex;
+                align-items: center;
+                
+                background-color: #007bff;
+                color: white;
+                border: 1px solid #007bff;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                width: 50px;
+                height: 50px;
+
+                &:hover {
+                    background-color: #0056b3;
+                    border-color: #0056b3;
+                    transform: scale(1.05);
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                }
+
+                &.arrow-button {
+                    background-color: transparent;
+                    border: 3px solid #ccc;
+                    color: #5271ff;
+                    padding: 10px;
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+
+                    &:hover {
+                        background-color: #f0f0f0;
+                        border-color: #aaa;
+                    }
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+
             a {
                 @include button;
-            
+
                 &:hover {
                     background-color: #0056b3;
                 }
@@ -99,6 +143,7 @@
             max-width: 100%;
             padding-right: 0;
         }
+
         .desc-compétences {
             border-left: none;
             margin-top: 5px;
@@ -109,14 +154,18 @@
 
             .compétences img {
                 max-width: 30px;
-                max-width: 30px;
             }
         }
-        
     }
+
     .modal .modal-content {
         .modal-links {
             flex-direction: column;
+            gap: 10px;
+
+            button {
+                margin: auto;
+            }
         }
     }
 }
