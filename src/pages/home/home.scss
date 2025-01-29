@@ -1,0 +1,275 @@
+main {
+    padding-top: 100px;
+    .social-icons {
+        position: fixed;
+        top: 50vh;
+        left: 0vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        z-index: 1;
+        gap: 10px;
+    
+        a {
+            text-decoration: none;
+            color: #333;
+            height: 40px;
+    
+            img {
+            width: 40px;
+            height: 40px;
+            }
+        }
+    }
+
+    .scrolling-bar {
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        overflow: hidden;
+      
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollText 5s linear infinite;
+            padding-right: 25vw;
+        }
+      
+        @keyframes scrollText {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    .home {
+        padding: 70px 10vw 250px 10vw;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-position: center;
+
+        .home-left {
+            width: 450px;
+            height: 450px;
+            background-color: $transparant-color;
+            border-radius: 50%;
+            padding: 60px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .home-left-name {
+                font-size: 50px;
+            }
+        }
+
+        .home-right {
+            width: 50%;
+            width: auto;
+            text-align: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            h2 {
+                width: auto;
+                font-size: 50px;
+                margin: 15px 0 15px auto;
+                cursor: pointer;
+            }
+
+            h2.active {
+                color: $primary-color;
+                transform: scale(1.1);
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .about-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 100px 10vw 245px 10vw;
+
+        .about-card {
+            background: linear-gradient(to bottom, rgba(82, 113, 255, 0), #5271ff);
+            width: 40%;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+            }
+
+            .about-skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 60px;
+                margin: 30px;
+                justify-content: center;
+
+                .about-skill {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .about-education {
+                margin: 30px;
+
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .about-presentation {
+        padding: 0 10vw 0 10vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .about-me {
+            width: 50%;
+            span {
+                font-size: 20px;
+                color: $primary-color;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 15px;
+                }
+            }
+            h2 {
+                margin: 5px 0 30px 0;
+            }
+            p {
+                margin: 5px 0;
+            }
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .category-dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) { 
+    main {
+        .social-icons {
+            margin-left: 10px;
+
+        }
+
+        .home {
+            padding: 50px 3vw 50px 3vw;
+            flex-direction: column;
+            align-items: center;
+
+            .home-left {
+                width: 300px;
+                height: 300px;
+
+                h2 {
+                    font-size: 16px;
+                }
+
+                .home-left-name {
+                    font-size: 30px;
+                }
+            }
+
+            .home-right {
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .about-cards {
+            padding: 30px 0 100px 0;
+            flex-direction: column;
+            gap: 30px;
+
+            .about-card {
+                width: 100%;
+                padding: 20px 30px;
+
+                .about-skills {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .about-presentation {
+            flex-direction: column;
+            padding: 0;
+
+            .about-me {
+                width: 100%;
+                padding: 0 10px 50px 60px;
+
+                span {
+                    font-size: 18px;
+
+                    img {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+             img {
+                margin: 0 auto;
+            }
+        }
+    }
+}

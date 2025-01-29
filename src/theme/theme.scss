@@ -1,0 +1,120 @@
+/* Thème sombre */
+.dark-theme {
+    background-color: #333;
+    color: white;
+
+    a {
+        color: white;
+    }
+
+    header {
+        background-color: #333;
+        .me img {
+            border: white 2px solid;
+        }
+
+        .nav .nav-links {
+            background-color: #333;
+
+            .nav-contact:hover {
+                border: white 2px solid;
+            }
+
+            .contact-options a, button {
+                color: white;
+            }
+        }
+    }
+
+    main .home .home-right h2 {
+        -webkit-text-stroke: 2px black;
+    }
+
+    .modal .modal-content {
+        background-color: #333;
+
+        .close-button {
+            color: white;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .modal-navigation .navigation-button {
+            color: white;
+        }
+    }
+
+    .contact-content .formulaire {
+        background-color: #333333e1;
+        form button {
+            color: white;
+        }
+    }
+
+    .footer-content {
+        background-color: #333;
+    }
+}
+    
+/* Thème clair (par défaut) */
+.light-theme {
+    background-color: white;
+    color: #333;
+
+    a {
+        color: black;
+    }
+
+    header {
+        background-color: white;
+        .me img {
+            border: black 2px solid;
+        }
+
+        .nav .nav-links {
+            background-color: white;
+
+            .nav-contact:hover {
+                border: black 2px solid;
+            }
+
+            .contact-options a, button {
+                color: #333;
+            }
+        }
+    }
+
+    main .home .home-right h2 {
+        -webkit-text-stroke: 1px white;
+    }
+
+    .modal .modal-content {
+        background-color: white;
+
+        .close-button {
+            color: black;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .modal-navigation .navigation-button {
+            color: #333;
+        }
+    }
+
+    .contact-content .formulaire {
+        background-color: rgba(255, 255, 255, 0.785);
+        form button {
+            color: black;
+        }
+    }
+
+    .footer-content {
+        background-color: white;
+    }
+    
+}
