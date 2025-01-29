@@ -9,16 +9,28 @@ main {
         align-items: flex-start;
         margin-left: 20px;
         z-index: 1;
+<<<<<<< HEAD
+        gap: 10px;
+    
+        a {
+            text-decoration: none;
+            color: #333;
+            height: 40px;
+=======
     
         a {
             margin-bottom: 10px;
             text-decoration: none;
             color: #333;
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
     
             img {
             width: 40px;
             height: 40px;
+<<<<<<< HEAD
+=======
             margin-right: 10px;
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
             }
         }
     }

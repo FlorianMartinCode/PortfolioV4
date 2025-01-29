@@ -9,7 +9,11 @@ header {
     align-items: center;
     padding: 0 8vw ;
     position: fixed;
+<<<<<<< HEAD
+    z-index: 2;
+=======
     z-index: 1;
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
     box-sizing: border-box;
   
     .me {
@@ -77,6 +81,40 @@ header {
                     background-color: transparent;
                 }
             }
+<<<<<<< HEAD
+
+            .contact-options {
+                display: flex;
+                align-items: center; /* Centrer les éléments verticalement */
+                justify-content: center; /* Centrer les éléments horizontalement */
+                gap: 5px;
+                padding: 5px 0;
+            }
+              
+              .contact-options a, .contact-options button {
+                display: flex;
+                align-items: center; /* Centrer l'icône à l'intérieur du lien ou du bouton */
+                justify-content: center; /* Centrer l'icône à l'intérieur du lien ou du bouton */
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                font-size: 24px; /* Taille des icônes */
+                color: #333; /* Couleur par défaut des icônes */
+                padding: 10px;
+                border-radius: 50%; /* Rend les boutons circulaires */
+                transition: color 0.3s ease, background-color 0.3s ease; /* Pour les transitions */
+              }
+              
+              .contact-options a:hover, .contact-options button:hover {
+                color: #209cee !important; /* Change la couleur des icônes au survol */
+                background-color: rgba(32, 156, 238, 0.1); /* Ajoute un fond au survol */
+              }
+              
+              .contact-options a i, .contact-options button i {
+                margin-right: 8px; /* Espace entre l'icône et le texte, si présent */
+              }        
+=======
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
         }
   
         .theme-switch {
@@ -153,6 +191,72 @@ header {
             }
         }
     }
+<<<<<<< HEAD
+
+    
+#calendly-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  #calendly-container.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #calendly-popup {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    padding-left: 10px;
+  }
+  
+  #calendly-popup iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  #calendly-close {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    right: 17px;
+    background-color: #209cee;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  #calendly-close:hover {
+    background-color: #1891b0;
+  }
+  
+=======
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
   
     @media screen and (max-width: 1024px) {
         .nav {
@@ -200,10 +304,13 @@ header {
                     right: 5vw;
                     top: 70px;
                     z-index: 1;
+<<<<<<< HEAD
+=======
 
                     a {
                         padding: 5px 5px 5px 0;
                     }
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
                 }
 
                 .nav-contact {
@@ -211,7 +318,11 @@ header {
                 }
 
                 .theme-switch {
+<<<<<<< HEAD
+                    margin: 0 0 10px 0;
+=======
                     margin: 15px 0 10px 0;
+>>>>>>> 622d32262eb115119582ebf569563b99a116b768
 
                     .toggle {
                         &::before {
