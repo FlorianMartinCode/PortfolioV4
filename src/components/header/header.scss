@@ -9,11 +9,7 @@ header {
     align-items: center;
     padding: 0 8vw ;
     position: fixed;
-<<<<<<< HEAD
     z-index: 2;
-=======
-    z-index: 1;
->>>>>>> 622d32262eb115119582ebf569563b99a116b768
     box-sizing: border-box;
   
     .me {
@@ -81,7 +77,6 @@ header {
                     background-color: transparent;
                 }
             }
-<<<<<<< HEAD
 
             .contact-options {
                 display: flex;
@@ -113,8 +108,6 @@ header {
               .contact-options a i, .contact-options button i {
                 margin-right: 8px; /* Espace entre l'icône et le texte, si présent */
               }        
-=======
->>>>>>> 622d32262eb115119582ebf569563b99a116b768
         }
   
         .theme-switch {
@@ -191,7 +184,6 @@ header {
             }
         }
     }
-<<<<<<< HEAD
 
     
 #calendly-container {
@@ -255,8 +247,6 @@ header {
     background-color: #1891b0;
   }
   
-=======
->>>>>>> 622d32262eb115119582ebf569563b99a116b768
   
     @media screen and (max-width: 1024px) {
         .nav {
@@ -304,13 +294,6 @@ header {
                     right: 5vw;
                     top: 70px;
                     z-index: 1;
-<<<<<<< HEAD
-=======
-
-                    a {
-                        padding: 5px 5px 5px 0;
-                    }
->>>>>>> 622d32262eb115119582ebf569563b99a116b768
                 }
 
                 .nav-contact {
@@ -318,11 +301,7 @@ header {
                 }
 
                 .theme-switch {
-<<<<<<< HEAD
-                    margin: 0 0 10px 0;
-=======
-                    margin: 15px 0 10px 0;
->>>>>>> 622d32262eb115119582ebf569563b99a116b768
+                    margin: 10px 0;
 
                     .toggle {
                         &::before {
