@@ -57,6 +57,20 @@ function Home() {
     setModalOpen(false);
   };
 
+  useEffect(() => {
+    // Ajouter 'no-scroll' au body quand la modal est ouverte
+    if (modalOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  
+    // Nettoyage de l'effet à la fermeture du composant
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [modalOpen]);
+
   const handlePreviousProject = () => {
     const newIndex = currentProjectIndex > 0 ? currentProjectIndex - 1 : projectsData.projects.length - 1;
     setCurrentProjectIndex(newIndex);
